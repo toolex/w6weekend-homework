@@ -32,6 +32,10 @@ const createNewListAnimal = function (form) {
   continent.textContent = form.continent.value;
   newListAnimal.appendChild(continent);
 
+  const endangered = document.createElement("p");
+  endangered.textContent = form.endangered.value;
+  newListAnimal.appendChild(endangered);
+
   return newListAnimal;
 }
 
