@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const newAnimalform = document.querySelector('#new-animal-form');
   newAnimalform.addEventListener('submit', handleNewAnimalFormSubmit);
 
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 
 
@@ -31,4 +33,9 @@ const createNewListAnimal = function (form) {
   newListAnimal.appendChild(continent);
 
   return newListAnimal;
+}
+
+const handleDeleteAllClick = function (event) {
+  const animalsList = document.querySelector('#endangered-animals');
+  animalsList.innerHTML = '';
 }
